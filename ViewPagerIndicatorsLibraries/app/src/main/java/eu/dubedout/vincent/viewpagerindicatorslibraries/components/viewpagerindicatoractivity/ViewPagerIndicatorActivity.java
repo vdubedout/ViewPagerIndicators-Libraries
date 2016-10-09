@@ -51,23 +51,31 @@ public class ViewPagerIndicatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_pager_indicator);
         ButterKnife.bind(this);
 
+        ViewPager.SimpleOnPageChangeListener pagerSyncronizer = getPagerSynchronizer();
+
         viewpagerTitle.setAdapter(getAdapter());
         indicatorTitle.setViewPager(viewpagerTitle);
+        indicatorTitle.setOnPageChangeListener(pagerSyncronizer);
 
         viewpagerTab.setAdapter(getAdapter());
         indicatorTab.setViewPager(viewpagerTab);
+        indicatorTab.setOnPageChangeListener(pagerSyncronizer);
 
         viewpagerLine.setAdapter(getAdapter());
         indicatorLine.setViewPager(viewpagerLine);
+        indicatorLine.setOnPageChangeListener(pagerSyncronizer);
 
         viewpagerUnderline.setAdapter(getAdapter());
         indicatorUnderline.setViewPager(viewpagerUnderline);
+        indicatorUnderline.setOnPageChangeListener(pagerSyncronizer);
 
         viewpagerCircle.setAdapter(getAdapter());
         indicatorCircle.setViewPager(viewpagerCircle);
+        indicatorCircle.setOnPageChangeListener(pagerSyncronizer);
 
         viewpagerIcon.setAdapter(getIconAdapter());
         indicatorIcon.setViewPager(viewpagerIcon);
+        indicatorIcon.setOnPageChangeListener(pagerSyncronizer);
     }
 
     @NonNull
@@ -77,6 +85,20 @@ public class ViewPagerIndicatorActivity extends AppCompatActivity {
 
     private PagerAdapter getIconAdapter() {
         return new DemoIconPagerAdapter(new GenericData(this).getContent());
+    }
+
+    private ViewPager.SimpleOnPageChangeListener getPagerSynchronizer() {
+        return new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                viewpagerTitle.setCurrentItem(position, true);
+                viewpagerTab.setCurrentItem(position, true);
+                viewpagerLine.setCurrentItem(position, true);
+                viewpagerUnderline.setCurrentItem(position, true);
+                viewpagerCircle.setCurrentItem(position, true);
+                viewpagerIcon.setCurrentItem(position, true);
+            }
+        };
     }
 
     class DemoIconPagerAdapter extends DemoPagerAdapter implements IconPagerAdapter {
