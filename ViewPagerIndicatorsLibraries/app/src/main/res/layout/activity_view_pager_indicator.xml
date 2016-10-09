@@ -1,13 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_view_pager_indicator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.viewpagerindicatoractivity.ViewPagerIndicatorActivity">
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/activity_view_pager_indicator_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="TitlePageIndicator" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.viewpagerindicator.TitlePageIndicator
+                android:id="@+id/activity_view_pager_indicator_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#3e3e3e"
+                app:footerColor="@color/colorPrimary"
+                app:selectedColor="@color/colorPrimary" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_view_pager_indicator_viewpager_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="TabPageIndicator" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <!-- Use this tool to generate the tabs colors http://jgilfelt.github.io/android-actionbarstylegenerator/-->
+            <!-- This indicator needs to get the style set in the main App theme -->
+            <com.viewpagerindicator.TabPageIndicator
+                android:id="@+id/activity_view_pager_indicator_tab"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_view_pager_indicator_viewpager_tab"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="UnderlinePageIndicator" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.viewpagerindicator.UnderlinePageIndicator
+                android:id="@+id/activity_view_pager_indicator_underline"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:textColor="#3e3e3e"
+                app:fades="false"
+                app:selectedColor="@color/colorPrimary" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_view_pager_indicator_viewpager_underline"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="LinePageIndicator" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.viewpagerindicator.LinePageIndicator
+                android:id="@+id/activity_view_pager_indicator_line"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:selectedColor="@color/colorPrimary" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_view_pager_indicator_viewpager_line"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="CirclePageIndicator" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/activity_view_pager_indicator_circle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingTop="5dp"
+                app:fillColor="@color/colorPrimary"
+                app:strokeColor="#000000" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_view_pager_indicator_viewpager_circle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="IconPageIndicator" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.viewpagerindicator.IconPageIndicator
+                android:id="@+id/activity_view_pager_indicator_icon"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingTop="5dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_view_pager_indicator_viewpager_icon"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

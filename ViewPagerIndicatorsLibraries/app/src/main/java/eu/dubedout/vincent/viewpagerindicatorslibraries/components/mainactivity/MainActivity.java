@@ -32,17 +32,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
+        listView.setAdapter(getAdapter());
         listView.setLayoutManager(new LinearLayoutManager(this));
         listView.setHasFixedSize(true);
-        listView.setAdapter(getAdapter());
     }
 
     @NonNull
     private ViewPagerIndicatorSummaryAdapter getAdapter() {
-        ViewPagerIndicatorSummaryAdapter adapter = new ViewPagerIndicatorSummaryAdapter(
-                getLibrarySummaryList()
-        );
-        adapter.setOnClickListener(clazz -> navigator.launch(clazz));
+        ViewPagerIndicatorSummaryAdapter adapter = new ViewPagerIndicatorSummaryAdapter(getLibrarySummaryList());
+        adapter.setOnClickListener(summary -> navigator.launch(summary.linkedActivity()));
+        return adapter;
     }
 
     /***
@@ -58,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
                 .setStarNumber(8148)
                 .setActiveIssues(127)
                 .setActivePullRequests(80)
-                .setLastUpdate("4 years")
+                .setLastUpdate("09/2012")
                 .setLinkedActivity(ViewPagerIndicatorActivity.class)
                 .build());
 
-        return null;
+        return list;
     }
 }

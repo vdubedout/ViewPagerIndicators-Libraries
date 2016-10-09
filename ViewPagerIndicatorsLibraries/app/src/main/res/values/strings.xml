@@ -3,4 +3,7 @@
     <string name="summary_adapter_last_update">Last update: %s</string>
     <string name="summary_adapter_active_issues">Active issues: %d</string>
     <string name="summary_adapter_active_pull_requests">Active Pull Requests: %d</string>
+    <string name="pager_content_swipe_left">Swipe left</string>
+    <string name="pager_content_swipe_left_or_right">Swipe left or right</string>
+    <string name="pager_content_swipe_right">Swipe right</string>
 </resources>

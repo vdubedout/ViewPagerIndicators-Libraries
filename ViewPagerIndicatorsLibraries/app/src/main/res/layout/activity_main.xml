@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Different ViewPager Indicators available as libraries in Android" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/activity_main_viewpagerindicators_list"

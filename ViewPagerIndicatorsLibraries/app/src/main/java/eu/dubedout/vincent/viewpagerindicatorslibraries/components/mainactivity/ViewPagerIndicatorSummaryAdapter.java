@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -44,7 +45,7 @@ public class ViewPagerIndicatorSummaryAdapter extends RecyclerView.Adapter<ViewP
         ViewPagerIndicatorSummary summary = list.get(position);
         Resources res = holder.starNumberView.getContext().getResources();
 
-        holder.starNumberView.setText(summary.starNumber());
+        holder.starNumberView.setText(String.valueOf(summary.starNumber()));
         holder.libraryNameView.setText(summary.libraryName());
         holder.lastUpdateView.setText(res.getString(R.string.summary_adapter_last_update, summary.lastUpdate()));
         holder.activeIssuesView.setText(res.getString(R.string.summary_adapter_active_issues, summary.activeIssues()));
