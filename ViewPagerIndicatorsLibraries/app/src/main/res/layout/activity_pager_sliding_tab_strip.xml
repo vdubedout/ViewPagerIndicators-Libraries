@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="PagerSlidingTabStrip (default theme)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/activity_pager_sliding_tab_strip_indicator_default"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_pager_sliding_tab_strip_viewpager_default"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="PagerSlidingTabStrip (themed)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/activity_pager_sliding_tab_strip_indicator_themed"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:pstsShouldExpand="true"
+                app:pstsTextAllCaps="true"
+                app:pstsDividerColor="@color/colorPrimary"
+                app:pstsIndicatorColor="@color/colorPrimary"
+                app:pstsUnderlineColor="@color/colorPrimary"
+                />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_pager_sliding_tab_strip_viewpager_themed"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

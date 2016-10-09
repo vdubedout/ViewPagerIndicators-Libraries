@@ -13,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.Navigator;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.R;
+import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.viewpagerindicatoractivity.ViewPagerIndicatorActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
      * Evolve using
      * data : https://api.github.com/repos/JakeWharton/ViewPagerIndicator
      * last commit: https://api.github.com/repos/JakeWharton/ViewPagerIndicator/commits
-     * @return
      */
     private List<ViewPagerIndicatorSummary> getLibrarySummaryList() {
         List<ViewPagerIndicatorSummary> list = new ArrayList<>();
@@ -61,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
                 .setLinkedActivity(ViewPagerIndicatorActivity.class)
                 .build());
 
+        list.add(ViewPagerIndicatorSummary.builder()
+                .setLibraryName("PagerSlidingTabStrip")
+                .setStarNumber(5500)
+                .setActiveIssues(153)
+                .setActivePullRequests(53)
+                .setLastUpdate("12/2013")
+                .setLinkedActivity(PagerSlidingTabStripActivity.class)
+                .build());
         return list;
     }
 }

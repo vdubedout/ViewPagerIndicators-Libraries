@@ -18,4 +18,5 @@ public class Navigator {
         Intent intent = new Intent(activity, clazz);
         ActivityCompat.startActivity(activity, intent, null);
     }
+
 }
