@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".components.viewpagerindicatoractivity.ViewPagerIndicatorActivity" />
-        <activity android:name=".components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity"></activity>
+        <activity android:name=".components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity" />
+        <activity android:name=".components.springindicatoractivity.SpringIndicatorActivity"></activity>
     </application>
 
 </manifest>

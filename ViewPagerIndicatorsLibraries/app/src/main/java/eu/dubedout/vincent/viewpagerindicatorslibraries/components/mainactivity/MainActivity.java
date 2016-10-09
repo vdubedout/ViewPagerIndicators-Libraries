@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.Navigator;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.R;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity;
+import eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.viewpagerindicatoractivity.ViewPagerIndicatorActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -68,6 +69,14 @@ public class MainActivity extends AppCompatActivity {
                 .setActivePullRequests(53)
                 .setLastUpdate("12/2013")
                 .setLinkedActivity(PagerSlidingTabStripActivity.class)
+                .build());
+        list.add(ViewPagerIndicatorSummary.builder()
+                .setLibraryName("SpringIndicator")
+                .setStarNumber(1650)
+                .setActiveIssues(15)
+                .setActivePullRequests(3)
+                .setLastUpdate("06/2016")
+                .setLinkedActivity(SpringIndicatorActivity.class)
                 .build());
         return list;
     }

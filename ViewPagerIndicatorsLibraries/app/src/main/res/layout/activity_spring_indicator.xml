@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_spring_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity">
+
+    <TextView
+    style="@style/pager_indicator_title"
+    android:text="SpringIndicator (default Theme)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <github.chenupt.springindicator.SpringIndicator
+            android:id="@+id/activity_spring_indicator_indicator_default"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_spring_indicator_viewpager_default"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="SpringIndicator (Themed)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <github.chenupt.springindicator.SpringIndicator
+            android:id="@+id/activity_spring_indicator_indicator_themed"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:siRadiusMax="30dp"
+            app:siRadiusMin="20dp"
+            app:siTextColor="@color/colorPrimary"
+            app:siSelectedTextColor="@android:color/white"
+            app:siIndicatorColor="@color/colorPrimary"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_spring_indicator_viewpager_themed"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+</LinearLayout>
