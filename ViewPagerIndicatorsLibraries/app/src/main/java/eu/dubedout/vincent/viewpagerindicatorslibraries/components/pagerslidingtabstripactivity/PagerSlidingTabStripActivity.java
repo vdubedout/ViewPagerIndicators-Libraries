@@ -49,6 +49,6 @@ public class PagerSlidingTabStripActivity extends AppCompatActivity {
 
     @NonNull
     private DemoPagerAdapter getAdapter() {
-        return new DemoPagerAdapter(new GenericData(this).getContent());
+        return new DemoPagerAdapter(new GenericData(this).getContentWithTitle());
     }
 }

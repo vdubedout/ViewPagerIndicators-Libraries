@@ -18,6 +18,8 @@ public class SpringIndicatorActivity extends AppCompatActivity {
     @BindView(R.id.activity_spring_indicator_viewpager_default) ViewPager viewpagerDefault;
     @BindView(R.id.activity_spring_indicator_indicator_themed) SpringIndicator indicatorThemed;
     @BindView(R.id.activity_spring_indicator_viewpager_themed) ViewPager viewpagerThemed;
+    @BindView(R.id.activity_spring_indicator_indicator_themed_without_title) SpringIndicator indicatorWithoutTitle;
+    @BindView(R.id.activity_spring_indicator_viewpager_themed_without_title) ViewPager viewpagerWithoutTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +29,17 @@ public class SpringIndicatorActivity extends AppCompatActivity {
 
         ViewPager.SimpleOnPageChangeListener synchronizer = getSynchronizer();
 
-        viewpagerDefault.setAdapter(getAdapter());
+        viewpagerDefault.setAdapter(getAdapterWithTitle());
         viewpagerDefault.addOnPageChangeListener(synchronizer);
         indicatorDefault.setViewPager(viewpagerDefault);
 
-        viewpagerThemed.setAdapter(getAdapter());
+        viewpagerThemed.setAdapter(getAdapterWithTitle());
         viewpagerThemed.addOnPageChangeListener(synchronizer);
         indicatorThemed.setViewPager(viewpagerThemed);
+
+        viewpagerWithoutTitle.setAdapter(getAdapterWithoutTitle());
+        viewpagerWithoutTitle.addOnPageChangeListener(synchronizer);
+        indicatorWithoutTitle.setViewPager(viewpagerWithoutTitle);
     }
 
     @NonNull
@@ -43,12 +49,18 @@ public class SpringIndicatorActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 viewpagerDefault.setCurrentItem(position, true);
                 viewpagerThemed.setCurrentItem(position, true);
+                viewpagerWithoutTitle.setCurrentItem(position, true);
             }
         };
     }
 
     @NonNull
-    private DemoPagerAdapter getAdapter() {
-        return new DemoPagerAdapter(new GenericData(this).getContent());
+    private DemoPagerAdapter getAdapterWithTitle() {
+        return new DemoPagerAdapter(new GenericData(this).getContentWithTitle());
+    }
+
+    @NonNull
+    private DemoPagerAdapter getAdapterWithoutTitle() {
+        return new DemoPagerAdapter(new GenericData(this).getContentWithoutTitle());
     }
 }

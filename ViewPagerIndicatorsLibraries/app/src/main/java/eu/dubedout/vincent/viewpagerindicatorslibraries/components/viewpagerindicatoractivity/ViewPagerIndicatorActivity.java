@@ -80,11 +80,11 @@ public class ViewPagerIndicatorActivity extends AppCompatActivity {
 
     @NonNull
     private DemoPagerAdapter getAdapter() {
-        return new DemoPagerAdapter(new GenericData(this).getContent());
+        return new DemoPagerAdapter(new GenericData(this).getContentWithTitle());
     }
 
     private PagerAdapter getIconAdapter() {
-        return new DemoIconPagerAdapter(new GenericData(this).getContent());
+        return new DemoIconPagerAdapter(new GenericData(this).getContentWithTitle());
     }
 
     private ViewPager.SimpleOnPageChangeListener getPagerSynchronizer() {

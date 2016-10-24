@@ -48,4 +48,27 @@
             android:layout_width="match_parent"
             android:layout_height="30dp" />
     </LinearLayout>
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="SpringIndicator (Themed) without title" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <github.chenupt.springindicator.SpringIndicator
+            android:id="@+id/activity_spring_indicator_indicator_themed_without_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:siRadiusMax="10dp"
+            app:siRadiusMin="4dp"
+            app:siTextColor="@color/colorPrimary"
+            app:siSelectedTextColor="@android:color/white"
+            app:siIndicatorColor="@color/colorPrimary"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_spring_indicator_viewpager_themed_without_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
 </LinearLayout>
