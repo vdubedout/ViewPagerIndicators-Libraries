@@ -13,6 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.Navigator;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.R;
+import eu.dubedout.vincent.viewpagerindicatorslibraries.components.devlightnavigationtabstripactivity.DevLightNavigationTabStripActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.rubberindicatoractivity.RubberIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity;
@@ -87,6 +88,15 @@ public class MainActivity extends AppCompatActivity {
                 .setActivePullRequests(1)
                 .setLastUpdate("11/2015")
                 .setLinkedActivity(RubberIndicatorActivity.class)
+                .build());
+
+        list.add(ViewPagerIndicatorSummary.builder()
+                .setLibraryName("NavigationTabStrip (DevLight)")
+                .setStarNumber(1122)
+                .setActiveIssues(4)
+                .setActivePullRequests(0)
+                .setLastUpdate("09/2016")
+                .setLinkedActivity(DevLightNavigationTabStripActivity.class)
                 .build());
         return list;
     }
