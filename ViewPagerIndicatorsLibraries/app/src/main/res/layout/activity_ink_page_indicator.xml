@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ink_page_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.inkpagerindicatoractivity.InkPageIndicatorActivity">
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="InkPageIndicator (default)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <com.pixelcan.inkpageindicator.InkPageIndicator
+            android:id="@+id/activity_ink_page_indicator_indicator_default"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_ink_page_indicator_pager_default"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="InkPageIndicator (themed)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <com.pixelcan.inkpageindicator.InkPageIndicator
+            android:id="@+id/activity_ink_page_indicator_indicator_themed"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            app:animationDuration="320"
+            app:currentPageIndicatorColor="@color/colorPrimaryDark"
+            app:dotDiameter="15dp"
+            app:dotGap="15dp"
+            app:pageIndicatorColor="#a4d0ff" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_ink_page_indicator_pager_themed"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

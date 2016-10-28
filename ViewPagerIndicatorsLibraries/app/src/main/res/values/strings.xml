@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ViewPagerIndicatorsLibraries</string>
+    <string name="app_name">Indicators Libraries</string>
     <string name="summary_adapter_last_update">Last update: %s</string>
     <string name="summary_adapter_active_issues">Active issues: %d</string>
     <string name="summary_adapter_active_pull_requests">Active Pull Requests: %d</string>

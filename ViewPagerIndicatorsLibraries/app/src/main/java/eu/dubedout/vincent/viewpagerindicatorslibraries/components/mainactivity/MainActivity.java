@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.Navigator;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.R;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.devlightnavigationtabstripactivity.DevLightNavigationTabStripActivity;
+import eu.dubedout.vincent.viewpagerindicatorslibraries.components.inkpagerindicatoractivity.InkPageIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pageindicatorviewdanylykactivity.PageIndicatorViewDanylykActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.rubberindicatoractivity.RubberIndicatorActivity;
@@ -118,6 +119,15 @@ public class MainActivity extends AppCompatActivity {
                 .setActivePullRequests(0)
                 .setLastUpdate("10/2016")
                 .setLinkedActivity(PageIndicatorViewDanylykActivity.class)
+                .build());
+
+        list.add(ViewPagerIndicatorSummary.builder()
+                .setLibraryName("Ink Page Indicator")
+                .setStarNumber(211)
+                .setActiveIssues(9)
+                .setActivePullRequests(1)
+                .setLastUpdate("08/2016")
+                .setLinkedActivity(InkPageIndicatorActivity.class)
                 .build());
 
         return list;
