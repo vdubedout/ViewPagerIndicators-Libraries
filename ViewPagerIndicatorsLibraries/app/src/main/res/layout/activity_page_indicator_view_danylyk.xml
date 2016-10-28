@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.pageindicatorviewdanylykactivity.PageIndicatorViewDanylykActivity">
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="PageIndicatorView (default)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/activity_page_indicator_view_danylyk_indicator_default"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:piv_animationType="none"
+                app:piv_selectedColor="@color/colorPrimaryDark"
+                app:piv_unselectedColor="#a4d0ff"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_page_indicator_view_danylyk_pager_default"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="PageIndicatorView (color animation)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/activity_page_indicator_view_danylyk_indicator_color"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:piv_animationType="color"
+                app:piv_selectedColor="@color/colorPrimaryDark"
+                app:piv_unselectedColor="#a4d0ff" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_page_indicator_view_danylyk_pager_color"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="PageIndicatorView (scale animation)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/activity_page_indicator_view_danylyk_indicator_scale"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:piv_animationType="scale"
+                app:piv_selectedColor="@color/colorPrimaryDark"
+                app:piv_unselectedColor="#a4d0ff" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_page_indicator_view_danylyk_pager_scale"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="PageIndicatorView (slide animation)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/activity_page_indicator_view_danylyk_indicator_slide"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:piv_animationType="slide"
+                app:piv_selectedColor="@color/colorPrimaryDark"
+                app:piv_unselectedColor="#a4d0ff" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_page_indicator_view_danylyk_pager_slide"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="PageIndicatorView (worm animation)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/activity_page_indicator_view_danylyk_indicator_worm"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:piv_animationType="worm"
+                app:piv_selectedColor="@color/colorPrimaryDark"
+                app:piv_unselectedColor="#a4d0ff" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_page_indicator_view_danylyk_pager_worm"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

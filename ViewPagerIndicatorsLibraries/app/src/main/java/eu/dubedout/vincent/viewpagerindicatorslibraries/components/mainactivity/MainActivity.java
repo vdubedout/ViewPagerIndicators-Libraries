@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.Navigator;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.R;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.devlightnavigationtabstripactivity.DevLightNavigationTabStripActivity;
+import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pageindicatorviewdanylykactivity.PageIndicatorViewDanylykActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.rubberindicatoractivity.RubberIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 .setLastUpdate("12/2013")
                 .setLinkedActivity(PagerSlidingTabStripActivity.class)
                 .build());
+
         list.add(ViewPagerIndicatorSummary.builder()
                 .setLibraryName("SpringIndicator")
                 .setStarNumber(1650)
@@ -108,6 +110,16 @@ public class MainActivity extends AppCompatActivity {
                 .setLastUpdate("09/2016")
                 .setLinkedActivity(StepperIndicatorActivity.class)
                 .build());
+
+        list.add(ViewPagerIndicatorSummary.builder()
+                .setLibraryName("PagerIndicatorView Danylyk")
+                .setStarNumber(1017)
+                .setActiveIssues(0)
+                .setActivePullRequests(0)
+                .setLastUpdate("10/2016")
+                .setLinkedActivity(PageIndicatorViewDanylykActivity.class)
+                .build());
+
         return list;
     }
 }

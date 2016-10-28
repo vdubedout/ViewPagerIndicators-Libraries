@@ -20,7 +20,8 @@
         <activity android:name=".components.springindicatoractivity.SpringIndicatorActivity" />
         <activity android:name=".components.rubberindicatoractivity.RubberIndicatorActivity" />
         <activity android:name=".components.devlightnavigationtabstripactivity.DevLightNavigationTabStripActivity" />
-        <activity android:name=".components.stepperindicatoractivity.StepperIndicatorActivity"></activity>
+        <activity android:name=".components.stepperindicatoractivity.StepperIndicatorActivity" />
+        <activity android:name=".components.pageindicatorviewdanylykactivity.PageIndicatorViewDanylykActivity"></activity>
     </application>
 
 </manifest>
