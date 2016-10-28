@@ -17,6 +17,7 @@ import eu.dubedout.vincent.viewpagerindicatorslibraries.components.devlightnavig
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.rubberindicatoractivity.RubberIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity;
+import eu.dubedout.vincent.viewpagerindicatorslibraries.components.stepperindicatoractivity.StepperIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.viewpagerindicatoractivity.ViewPagerIndicatorActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -97,6 +98,15 @@ public class MainActivity extends AppCompatActivity {
                 .setActivePullRequests(0)
                 .setLastUpdate("09/2016")
                 .setLinkedActivity(DevLightNavigationTabStripActivity.class)
+                .build());
+
+        list.add(ViewPagerIndicatorSummary.builder()
+                .setLibraryName("Stepper Indicator")
+                .setStarNumber(838)
+                .setActiveIssues(6)
+                .setActivePullRequests(2)
+                .setLastUpdate("09/2016")
+                .setLinkedActivity(StepperIndicatorActivity.class)
                 .build());
         return list;
     }

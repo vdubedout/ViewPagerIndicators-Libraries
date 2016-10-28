@@ -72,9 +72,9 @@ public class DevLightNavigationTabStripActivity extends AppCompatActivity {
         return new ViewPager.SimpleOnPageChangeListener(){
             @Override
             public void onPageSelected(int position) {
-                indicatorDefault.setTabIndex(position);
-                indicatorPoint.setTabIndex(position);
-                indicatorThemed.setTabIndex(position);
+                viewpagerDefault.setCurrentItem(position, true);
+                viewpagerPoint.setCurrentItem(position, true);
+                viewpagerThemed.setCurrentItem(position, true);
             }
         };
     }

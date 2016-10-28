@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_stepper_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.stepperindicatoractivity.StepperIndicatorActivity">
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="Stepper Indicator (default theme)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <com.badoualy.stepperindicator.StepperIndicator
+            android:id="@+id/activity_stepper_indicator_indicator_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_stepper_indicator_pager_default"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="Stepper Indicator (themed)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <com.badoualy.stepperindicator.StepperIndicator
+            android:id="@+id/activity_stepper_indicator_indicator_themed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:stpi_animDuration="500"
+            tools:stpi_stepCount="4"
+            app:stpi_circleColor="#afb7ff"
+            app:stpi_circleRadius="12dp"
+            app:stpi_circleStrokeWidth="1dp"
+            app:stpi_indicatorColor="@color/colorPrimaryDark"
+            app:stpi_lineColor="#afb7ff"
+            app:stpi_lineDoneColor="@color/colorPrimaryDark"
+            app:stpi_lineStrokeWidth="1dp"
+            app:stpi_lineMargin="10dp"
+            app:stpi_showDoneIcon="true"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_stepper_indicator_pager_themed"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

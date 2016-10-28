@@ -19,7 +19,8 @@
         <activity android:name=".components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity" />
         <activity android:name=".components.springindicatoractivity.SpringIndicatorActivity" />
         <activity android:name=".components.rubberindicatoractivity.RubberIndicatorActivity" />
-        <activity android:name=".components.devlightnavigationtabstripactivity.DevLightNavigationTabStripActivity"></activity>
+        <activity android:name=".components.devlightnavigationtabstripactivity.DevLightNavigationTabStripActivity" />
+        <activity android:name=".components.stepperindicatoractivity.StepperIndicatorActivity"></activity>
     </application>
 
 </manifest>
