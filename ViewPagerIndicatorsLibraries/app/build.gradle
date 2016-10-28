@@ -46,7 +46,6 @@ dependencies {
     compile 'com.github.badoualy:stepper-indicator:1.0.6'
     compile 'com.romandanylyk:pageindicatorview:0.0.5'
     compile 'com.pacioianu.david:ink-page-indicator:1.2.0'
-    compile 'com.github.nekocode:ToolbarIndicator:1.1'
     compile 'com.github.bhargavms:PodSLider:1.2.0'
     compile 'com.github.andyxialm:UltraIndicator:0fe34ab49c'
 

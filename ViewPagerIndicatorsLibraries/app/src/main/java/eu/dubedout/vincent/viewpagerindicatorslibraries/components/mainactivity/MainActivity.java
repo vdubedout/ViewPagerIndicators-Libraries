@@ -17,6 +17,7 @@ import eu.dubedout.vincent.viewpagerindicatorslibraries.components.devlightnavig
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.inkpagerindicatoractivity.InkPageIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pageindicatorviewdanylykactivity.PageIndicatorViewDanylykActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.pagerslidingtabstripactivity.PagerSlidingTabStripActivity;
+import eu.dubedout.vincent.viewpagerindicatorslibraries.components.podslideractivity.PodSliderActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.rubberindicatoractivity.RubberIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity;
 import eu.dubedout.vincent.viewpagerindicatorslibraries.components.stepperindicatoractivity.StepperIndicatorActivity;
@@ -128,6 +129,15 @@ public class MainActivity extends AppCompatActivity {
                 .setActivePullRequests(1)
                 .setLastUpdate("08/2016")
                 .setLinkedActivity(InkPageIndicatorActivity.class)
+                .build());
+
+        list.add(ViewPagerIndicatorSummary.builder()
+                .setLibraryName("Pod Slider Indicator")
+                .setStarNumber(62)
+                .setActiveIssues(1)
+                .setActivePullRequests(0)
+                .setLastUpdate("08/2016")
+                .setLinkedActivity(PodSliderActivity.class)
                 .build());
 
         return list;

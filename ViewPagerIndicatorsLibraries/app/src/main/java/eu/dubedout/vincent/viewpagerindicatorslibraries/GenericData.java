@@ -29,4 +29,13 @@ public class GenericData {
         content.add(new PageData("", context.getString(R.string.pager_content_swipe_right)));
         return content;
     }
+
+    public List<PageData> getContentWithOneLetterTitle(){
+        ArrayList<PageData> content = new ArrayList<>();
+        content.add(new PageData("1", context.getString(R.string.pager_content_swipe_left)));
+        content.add(new PageData("2", context.getString(R.string.pager_content_swipe_left_or_right)));
+        content.add(new PageData("3", context.getString(R.string.pager_content_swipe_left_or_right)));
+        content.add(new PageData("4", context.getString(R.string.pager_content_swipe_right)));
+        return content;
+    }
 }

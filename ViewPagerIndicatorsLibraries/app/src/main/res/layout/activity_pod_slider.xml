@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pod_slider"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.podslideractivity.PodSliderActivity">
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="PodSliderIndicator (default)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <com.bhargavms.podslider.PodSlider
+            android:id="@+id/activity_pod_slider_indicator_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_pod_slider_pager_default"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/pager_indicator_title"
+        android:text="PodSliderIndicator (themed)" />
+
+    <LinearLayout style="@style/pager_container">
+
+        <com.bhargavms.podslider.PodSlider
+            android:id="@+id/activity_pod_slider_indicator_themed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainSliderColor="@color/colorPrimaryDark"
+            app:podColor="#7fecff"
+            app:selectedPodColor="#fff" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_pod_slider_pager_themed"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -22,7 +22,8 @@
         <activity android:name=".components.devlightnavigationtabstripactivity.DevLightNavigationTabStripActivity" />
         <activity android:name=".components.stepperindicatoractivity.StepperIndicatorActivity" />
         <activity android:name=".components.pageindicatorviewdanylykactivity.PageIndicatorViewDanylykActivity" />
-        <activity android:name=".components.inkpagerindicatoractivity.InkPageIndicatorActivity"></activity>
+        <activity android:name=".components.inkpagerindicatoractivity.InkPageIndicatorActivity" />
+        <activity android:name=".components.podslideractivity.PodSliderActivity"></activity>
     </application>
 
 </manifest>
