@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.rd.animation.AnimationType;
+
 import java.util.ArrayList;
 import java.util.List;
 

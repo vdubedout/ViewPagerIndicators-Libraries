@@ -1,74 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_spring_indicator"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-    style="@style/pager_indicator_title"
-    android:text="SpringIndicator (default Theme)" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="eu.dubedout.vincent.viewpagerindicatorslibraries.components.springindicatoractivity.SpringIndicatorActivity">
 
-    <LinearLayout style="@style/pager_container">
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="SpringIndicator (default Theme)" />
 
-        <github.chenupt.springindicator.SpringIndicator
-            android:id="@+id/activity_spring_indicator_indicator_default"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            />
+        <LinearLayout style="@style/pager_container">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/activity_spring_indicator_viewpager_default"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            <github.chenupt.springindicator.SpringIndicator
+                android:id="@+id/activity_spring_indicator_indicator_default"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_spring_indicator_viewpager_default"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="SpringIndicator (Themed)" />
+
+        <LinearLayout style="@style/pager_container">
+
+            <github.chenupt.springindicator.SpringIndicator
+                android:id="@+id/activity_spring_indicator_indicator_themed"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:siIndicatorColor="@color/colorPrimary"
+                app:siRadiusMax="20dp"
+                app:siRadiusMin="10dp"
+                app:siSelectedTextColor="@android:color/white"
+                app:siTextColor="@color/colorPrimary" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_spring_indicator_viewpager_themed"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/pager_indicator_title"
+            android:text="SpringIndicator (Themed) without title" />
+
+        <LinearLayout style="@style/pager_container"
+            android:gravity="center_horizontal">
+
+            <github.chenupt.springindicator.SpringIndicator
+                android:id="@+id/activity_spring_indicator_indicator_themed_without_title"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                app:siIndicatorColor="@color/colorPrimary"
+                app:siRadiusMax="10dp"
+                app:siRadiusMin="4dp"
+                app:siSelectedTextColor="@android:color/white"
+                app:siTextColor="@color/colorPrimary" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/activity_spring_indicator_viewpager_themed_without_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        style="@style/pager_indicator_title"
-        android:text="SpringIndicator (Themed)" />
-
-    <LinearLayout style="@style/pager_container">
-
-        <github.chenupt.springindicator.SpringIndicator
-            android:id="@+id/activity_spring_indicator_indicator_themed"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            app:siRadiusMax="30dp"
-            app:siRadiusMin="20dp"
-            app:siTextColor="@color/colorPrimary"
-            app:siSelectedTextColor="@android:color/white"
-            app:siIndicatorColor="@color/colorPrimary"
-            />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/activity_spring_indicator_viewpager_themed"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-    </LinearLayout>
-
-    <TextView
-        style="@style/pager_indicator_title"
-        android:text="SpringIndicator (Themed) without title" />
-
-    <LinearLayout style="@style/pager_container">
-
-        <github.chenupt.springindicator.SpringIndicator
-            android:id="@+id/activity_spring_indicator_indicator_themed_without_title"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:siRadiusMax="10dp"
-            app:siRadiusMin="4dp"
-            app:siTextColor="@color/colorPrimary"
-            app:siSelectedTextColor="@android:color/white"
-            app:siIndicatorColor="@color/colorPrimary"
-            />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/activity_spring_indicator_viewpager_themed_without_title"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-    </LinearLayout>
-</LinearLayout>
+</ScrollView>

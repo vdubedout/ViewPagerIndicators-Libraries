@@ -56,7 +56,7 @@ public class SpringIndicatorActivity extends AppCompatActivity {
 
     @NonNull
     private DemoPagerAdapter getAdapterWithTitle() {
-        return new DemoPagerAdapter(new GenericData(this).getContentWithTitle());
+        return new DemoPagerAdapter(new GenericData(this).getContentWithOneLetterTitle());
     }
 
     @NonNull
